@@ -1,7 +1,0 @@
-#!/usr/bin/with-contenv sh
-
-{{ if (exists (getenv "SNAPSERVER_URL")) }}
-exec logutil-service /var/log/snapcastHttpd
-{{ else }}
-
-{{ end }}

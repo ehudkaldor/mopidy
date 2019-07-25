@@ -1,3 +1,0 @@
-[template]
-src = "snapcastHttpd.log.run.tmpl"
-dest = "/etc/services.d/snapcastHttpd/log/run"

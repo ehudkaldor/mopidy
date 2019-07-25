@@ -1,3 +1,0 @@
-[template]
-src = "snapcast.conf.tmpl"
-dest = "/etc/services.d/snapcast/run"
