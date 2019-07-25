@@ -1,0 +1,52 @@
+[logging]
+debug_file = /var/log/mopidy/mopidy-debug.log
+
+[local]
+library = images
+enabled = true
+data_dir = /opt/data
+media_dir = /opt/music
+playlists_dir = /opt/playlists
+scan_timeout = 2000
+scan_flush_threshold = 100
+
+[local-images]
+library = sqlite
+
+[audio]
+#output = autoaudiosink
+output = audioresample ! audioconvert ! audio/x-raw,rate=48000,channels=2,format=S16LE ! wavenc ! filesink location=/streams/{{or (getenv "HOSTNAME") "default"}}
+
+[mpd]
+hostname = 0.0.0.0
+
+[http]
+enabled = true
+hostname = 0.0.0.0
+port = 6680
+zeroconf = Mopidy HTTP server on $hostname
+
+[stream]
+enabled = true
+protocols =
+    http
+    https
+    mms
+    rtmp
+    rtmps
+    rtsp
+timeout = 5000
+metadata_blacklist =
+
+
+[spotify]
+client_id = 0be02142-5251-4591-bfa1-36835f821436
+client_secret = OhfNk2U_2DW0z1aynYwi0vPMVrx0aOgAqQsdXnDAxy4=
+
+[spotify_web]
+client_id = 0be02142-5251-4591-bfa1-36835f821436
+client_secret = OhfNk2U_2DW0z1aynYwi0vPMVrx0aOgAqQsdXnDAxy4=
+
+[iris]
+country = US
+locale = en_US

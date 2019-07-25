@@ -1,6 +1,0 @@
-#!/bin/sh
-#fdmove -c 2 1
-#s6-envdir env
-
-echo "Starting fs-watcher"
-python3 /opt/fs-watcher/fs-watcher.py /tmp $(pwd)/kill.sh

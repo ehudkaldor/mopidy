@@ -1,4 +1,0 @@
-#!/usr/bin/with-contenv sh
-mkfifo /tmp/$HOSTNAME
-mopidy config
-mopidy local scan

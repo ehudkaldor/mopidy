@@ -1,4 +1,0 @@
-#!/usr/bin/with-contenv sh
-
-confd -onetime -backend env
-#confd -onetime -backend etcd -node http://etcd:2379
